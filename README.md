@@ -41,7 +41,7 @@ use Cruide\PHPDaemon\DaemonInterface;
 
 $config = new DaemonConfig(workDir: '/var/app', sleepSeconds: 5);
 
-new class($config) extends AbstractDaemon implements DaemonInterface
+$daemon = new class($config) extends AbstractDaemon implements DaemonInterface
 {
     public function process(): void
     {
